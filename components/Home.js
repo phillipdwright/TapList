@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import { View, StyleSheet, FlatList, Alert, Button } from 'react-native';
+import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
-import Header from './Header';
 import ListItem from './ListItem';
 import AddItem from './AddItem';
 
@@ -34,7 +33,6 @@ const Home = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Header title='Tap List'/>
             <AddItem addItem={addItem}/>
             <FlatList
               data={items}
